@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path
 from .views import *
-
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -20,4 +19,8 @@ urlpatterns = [
    path("welcome/", view_logout_request, name="logout"),
    path("our-product/", view_our_product, name="ourproduct"),
    path('search/',view_search, name="search"),
+   path('file-upload/',view_upload, name="uoload"),
+   path('file-upload/upload',view_upload_pic),
+  
+
 ]

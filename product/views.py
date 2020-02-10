@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.template import Template,Context
-from .models import Product
+from .models import Product,file
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.contrib.auth import authenticate,login,logout
@@ -152,10 +152,10 @@ def view_search(request):
 def view_upload(request):
     return render(request,'upload.html')
 
-# def view_upload_pic(request):
+def view_upload_pic(request):
   
-#     img = request.FILES['product_image']
-#     print(img)
-#     Bookfile = file(product_image = img)
-#     Bookfile.save()
-#     return render(request, 'index.html')
+    img = request.FILES['file']
+    print(img)
+    Bookfile = file(file = img)
+    Bookfile.save()
+    return render(request, 'index.html')

@@ -22,19 +22,19 @@
 
             {% if sr %}
             {% for rows in sr %}
-            <table >
-                <tr>
-                  <td>Item Name</td>
-                    <td>{{rows.product_name}}</td>
-                    </tr>
-                    <tr>
-                        <td>Item Code</td>
-                        <td>{{rows.product_code}}</td>
-                    </tr>
-                    <tr>
-                        <td>Item Price</td>
-                        <td>{{rows.product_price}}</td>
-                    </tr>
+          
+            <img src="{{rows.product_image.url}}" style="height: 350px; width:225px;"><br>
+                   {{rows.product_name}} <br>
+                   {{rows.product_code}} <br>
+                   {{rows.product_price}} <br>
+                    
+                       
+                
+                           
+                   
+                    <button type="button" class="btn-primary col-lg-12">Buy Now</button><br>
+                    <button type="button" class="btn-warning col-lg-12">Add to Cart</button><br>
+                   
                     <!-- <tr>
                         <td>Describe</td>
                         <td>{{rows.describe}}</td>
